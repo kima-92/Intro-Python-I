@@ -58,11 +58,12 @@ print("prints out the keys and values like so:")
 # key: baz, value: 12
 #
 # Note: Google "python keyword arguments".
-"""
+
 # YOUR CODE HERE
-def f4():
-    print("key: ", a)
-    print("value: ", b)
+def f4(**kargs):
+    #print(f"key is {key}, value: {value}")
+    for key, value in kargs.items():
+        print(f"key: {key}, value: {value}")
 
 # Should print
 # key: a, value: 12
@@ -75,6 +76,7 @@ f4(a=12, b=30)
 # key: founded, value: "March 23, 1868"
 f4(city="Berkeley", population=121240, founded="March 23, 1868")
 
+"""
 d = {
     "monster": "goblin",
     "hp": 3
@@ -82,4 +84,4 @@ d = {
 
 # How do you have to modify the f4 call below to make this work?
 f4(d)
- """
+"""
